@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f7f7f7;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 100rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#App {
+  min-width: 20rem;
+}
+
+#App > .content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#App > .content > header {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-bottom: .0625rem solid #292929;
+}
+/* Reservation Form styles*/
+.reservation-content {
+  display: block;
+}
+
+.reservation-content > header {
+  background: #707070;
+  min-height: auto;
+}
+
+.reservation-content .reservation-header-content {
+  z-index: 1;
+  padding: 1.5rem 16px 0;
+  height: 100%;
+  width: calc(100% - 32px);
+}
+
+.reservation-content h1 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 0 0 16px;
+  font-family: "Raleway", "Open Sans", sans-serif;
+  color: #262626;
+  text-align: left;
+}
+
+.reservation-content .reservation-form {
+  display: block;
+  margin: 0;
+}
+.reservation-content .reservation-form * {
+  box-sizing: border-box;
+}
+
+.reservation-form-content {
+  border-radius: 5px;
+}
+
+.reservation-content .reservation-form .reservation-form-inputs {
+  display: flex;
+  min-width: 17rem;
+}
+
+.reservation-content .reservation-form .reservation-form-inputs .reservation-form-date {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  overflow: visible;
+  background: transparent;
+  min-width: 9.375rem;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  flex-grow: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reservation-content .reservation-form .reservation-form-inputs input {
+  height: 100%;
+  font-size: 18px;
+  color: #707070;
+  padding: 0 10px;
+  border: 1px solid #a7a2a2;
+  border-radius: 5px 0 0 5px;
+}
+
+.reservation-content .reservation-form .reservation-form-inputs select {
+  height: 100%;
+  font-size: 18px;
+  color: #707070;
+  padding: 0 10px;
+  border: 1px solid #a7a2a2;
+  border-left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.reservation-content .reservation-form 
+.reservation-form-inputs .reservation-form-date 
+  .reservation-form-date-input{
+    position: relative;
+    height: 3rem;
+}
+
+.reservation-form .reservation-form-submit {
+  display: flex;
+  flex-direction: row;
+}
+
+.reservation-form .reservation-form-submit .reservation-form-submit-content {
+  min-width: 9rem;
+  border-radius: 4px;
+  margin-left: 10px;
+  overflow: hidden;
+}
+.reservation-form .reservation-form-submit .reservation-form-submit-content button {
+  border-radius: 5px;
+  background-color: #cc027b;
+  color: #fff;
+  height: 3rem;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all .3s ease-out;
+}
+
+/*
+* End reservation form styles
+*/
+
+
+.btn-red {
+  background: #cc027b;
+  border: 0;
+  width: 100%;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 4px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  height: 2rem;
+}
+
+.btn-disabled {
+  background: #707070;
+  color: #cfcfcf;
+  cursor: not-allowed;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.restaurant-container .infinite-scroll-component {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjusts spacing between cards */  
+  width: 100%; /* Ensures the container takes full width */
+  max-width: 1280px;
+  margin: 0 auto; /* Center aligns the container */
+  padding: 0 20px; /* Adds padding on the sides */
+}
+
+.restaurant-card {
+  flex: 0 1 30%; /* Adjusts the width to be roughly one-third */
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.restaurant-card .restaurant-img {
+  margin: -11px -11px 0 -11px;
+}
+
+.restaurant-card .restaurant-line {
+  margin: 0 0 8px;
+  color: #707070;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.restaurant-card .restaurant-line .restaurant-reviews {
+  font-size: 14px;
+  color: #525252;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.restaurant-card .restaurant-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: initial;
+}
+
+.restaurant-card .restaurant-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #292929;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0 4px;
+}
+
+.restaurant-card img {
+  min-height: 127px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+
+/*
+* Start Booking Modal Styles
+*/
+
+.modal-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  overflow: hidden;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  border-radius: 10px;
+  height: 650px;
+  width: 550px;    
+  margin-left: -225PX;
+  margin-top: -325px;
+}
+
+.modal-content h2 {
+  font-family: "Raleway", "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 18px;
+}
+
+.modal-content h2 span {
+  display: block;
+  font-size: 28px;
+  color: #cc027b;
+}
+
+.modal-content.modal-success {
+  height: 510px;
+  margin-top: -255px;
+}
+
+.success {
+  color: #287e00 !important;
+}
+
+.modal-img img {
+  min-height: 127px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+.modal-form {
+  padding: 10px;
+}
+
+.modal-form p {
+  text-align: justify;
+  font-size: 14px;
+}
+
+.modal-form input {
+  width: 98%;
+  height: 2rem;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #8f8f8f;
+  font-size: 16px;
+  padding-left: 7px;
+}
+
+.btn-cancel {
+  background: #421630;
+  color: #fff;
+}
+
+
+/*
+* End Booking Modal Styles
+*/
