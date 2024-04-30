@@ -35,3 +35,34 @@
     * End Reservation Form Component
     */
 }
+
+@media (max-width: 767px) {
+    .reservation-content .reservation-form {
+        padding: 15px
+    }
+    
+    .reservation-form .reservation-form-submit .reservation-form-submit-content {
+        min-width: 6rem;
+    }
+    
+    .restaurant-container .infinite-scroll-component {
+        padding: 0;
+    }
+
+    .restaurant-card {
+        flex: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: -275px;
+        left: 0;
+        height: 550px;
+    }
+
+    .modal-content.modal-success {
+        height: 410px;
+        margin-top: -205px;
+    }
+}

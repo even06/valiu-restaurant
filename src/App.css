@@ -46,9 +46,11 @@ body {
 }
 
 .reservation-content > header {
-  background: #707070;
+  background: linear-gradient(232.92deg, rgba(26, 10, 71, .8) 0%, rgba(13, 27, 69, .6) .01%, rgba(13, 27, 69, .8) 51.04%, #002273 99.1%);
   min-height: auto;
 }
+
+
 
 .reservation-content .reservation-header-content {
   z-index: 1;
@@ -62,14 +64,15 @@ body {
   line-height: 28px;
   margin: 0 0 16px;
   font-family: "Raleway", "Open Sans", sans-serif;
-  color: #262626;
-  text-align: left;
+  color: #fff;
+  text-align: center;
 }
 
 .reservation-content .reservation-form {
   display: block;
   margin: 0;
 }
+
 .reservation-content .reservation-form * {
   box-sizing: border-box;
 }
@@ -134,6 +137,7 @@ body {
   margin-left: 10px;
   overflow: hidden;
 }
+
 .reservation-form .reservation-form-submit .reservation-form-submit-content button {
   border-radius: 5px;
   background-color: #cc027b;

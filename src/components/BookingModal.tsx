@@ -17,8 +17,6 @@ const BookingModal = ({ restaurant, isOpen, onClose, onConfirmReservation }: Boo
     const { date, guests, name, email } = useSelector((state: RootState) => state.reservation);
     const [bookingStatus, setBookingStatus] = useState({ success: false, message: '' });    
     const dispatch = useDispatch();
-    dispatch(setEmail(''));
-    dispatch(setName(''));
 
     const handleConfirmClick = async () => {
       try {
@@ -27,6 +25,9 @@ const BookingModal = ({ restaurant, isOpen, onClose, onConfirmReservation }: Boo
           setBookingStatus({ success: true, message: bookingConfirmation.message });
           //onConfirmReservation();
       } catch (error) {
+        
+        dispatch(setEmail(''));
+        dispatch(setName(''));
         if (error instanceof Error) {
           const axiosError = error as AxiosError;
           if (axiosError.response) {
