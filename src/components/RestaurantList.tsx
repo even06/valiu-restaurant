@@ -41,7 +41,7 @@ const RestaurantList: React.FC<RestaurantListProps & { onReserveClick: (restaura
           <InfiniteScroll
               dataLength={data.length}
               next={fetchMoreData}
-              hasMore={hasMore}
+              hasMore={true}
               loader={<h4></h4>}
           >
               {data.map(restaurant => (
